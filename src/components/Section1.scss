@@ -1,0 +1,55 @@
+// Section1.scss
+@import "../colors.scss";
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+.section1-container {
+  background-image: url("https://greenpointdist.com/wp-content/uploads/01_GreenBell-Pepper.png");
+  background-size: cover;
+  background-position: center;
+  color: $white-color; /* Set text color to white for better visibility */
+  height: 95vh;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+
+  .hero-cta {
+    padding: 20px;
+    bottom: 150px;
+    position: absolute;
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+  }
+
+  h1 {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-family: "Agbalumo", cursive;
+  }
+
+  @media screen and (max-width: 995px) {
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .btn {
+    font-size: 1rem; /* Adjust font size as needed */
+  }
+  .btn:hover {
+    background-color: $primary-color;
+    color: white;
+    border: 1px solid $primary-color;
+  }
+
+  .btn-text {
+    font-weight: bold;
+  }
+}

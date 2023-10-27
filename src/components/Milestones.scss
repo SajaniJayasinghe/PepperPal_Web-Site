@@ -1,0 +1,35 @@
+/* Add this CSS to your project */
+
+.timeline-event {
+  position: relative;
+
+  .timeline-event::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 2px;
+    height: 50%;
+    background-color: #007bff; /* Adjust color as needed */
+    transform: translateY(-50%);
+  }
+
+  .timeline-event[interval]::before {
+    content: attr(interval);
+    position: absolute;
+    top: 10px;
+    left: -120px; /* Adjust as needed */
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+
+  .timeline-event[interval].active::before {
+    opacity: 1;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}
